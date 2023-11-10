@@ -20,10 +20,9 @@ class ContactList(list):
     def __init__(self, list_): 
         self.list_ = list_ 
     def search_by_name(self, name): 
-        a = [] 
-        for i in self.list_: 
-            if name in i: a.append(i) 
-            return a 
+        a = [i for i in self.list_ if name in i] 
+
+        return a 
 
 all_contacts = ContactList(['Ivan', 'Maris', 'Olga', 'Ivan Olya', 'Olya Ivan', 'ivan']) 
 print(all_contacts.search_by_name('Olya'))
