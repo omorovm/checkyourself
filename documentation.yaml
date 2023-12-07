@@ -1,0 +1,36 @@
+openapi: 3.0.0
+info:
+  title: Мой CRUD 
+  version: 1.0.0
+paths:
+  /get_items/:
+    get:
+      summary: Получить список всех книг
+      responses:
+        '200':
+          description: Успешный ответ
+
+  /create_items/:
+    post:
+      summary: Создать новую книгу
+      requestBody:
+        description: Данные новой книги
+
+  /retrieve_items/:
+    get:
+      summary: Получить информацию о книге по идентификатору
+      responses:
+        '200':
+          description: Успешный ответ
+
+  /update_items/:
+    put:
+      summary: Обновить информацию о книге
+      requestBody:
+        description: Новые данные книги
+
+    delete:
+      summary: Удалить книгу по идентификатору
+      responses:
+        '204':
+          description: Книга успешна удален
